@@ -1,0 +1,3 @@
+﻿Win32 APIのSetFileInformationByHandleでRootDirectoryを設定するとエラーとなる問題の調査のためのコード
+
+https://learn.microsoft.com/ja-jp/answers/questions/6015074/setfileinformationbyhandle-filerenameinfo-rootdire?page=1&orderby=Helpful&translated=false#answers

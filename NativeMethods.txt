@@ -1,0 +1,17 @@
+﻿GetThreadLocale
+SetThreadLocale
+CreateFile
+CloseHandle
+GetFileInformationByHandle
+SetFileInformationByHandle
+GetFinalPathNameByHandle
+
+FILE_RENAME_INFO
+FILE_RENAME_INFORMATION_EX
+FILE_RENAME_INFORMATION
+
+GENERIC_READ
+GENERIC_WRITE
+FILE_ADD_FILE
+
+FormatMessage
