@@ -1,0 +1,117 @@
+﻿KernelBase.dll!SetFileInformationByHandle(void):
+00007FFCA8AD6A00  sub         rsp,48h  
+00007FFCA8AD6A04  mov         r11,rcx  
+00007FFCA8AD6A07  mov         r10d,edx  
+00007FFCA8AD6A0A  test        edx,edx  
+00007FFCA8AD6A0C  jne         SetFileInformationByHandle+48h (07FFCA8AD6A48h)  
+00007FFCA8AD6A0E  lea         ecx,[rdx+4]  
+00007FFCA8AD6A11  lea         eax,[rdx+28h]  
+00007FFCA8AD6A14  cmp         eax,r9d  
+00007FFCA8AD6A17  ja          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C562h (07FFCA8B35FE2h)  
+00007FFCA8AD6A1D  mov         dword ptr [rsp+20h],ecx  
+00007FFCA8AD6A21  lea         rdx,[rsp+30h]  
+00007FFCA8AD6A26  mov         rcx,r11  
+00007FFCA8AD6A29  call        qword ptr [__imp_NtSetInformationFile (07FFCA8C42BD0h)]  
+00007FFCA8AD6A30  nop         dword ptr [rax+rax]  
+00007FFCA8AD6A35  test        eax,eax  
+00007FFCA8AD6A37  js          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C575h (07FFCA8B35FF5h)  
+00007FFCA8AD6A3D  mov         eax,1  
+00007FFCA8AD6A42  add         rsp,48h  
+00007FFCA8AD6A46  ret  
+00007FFCA8AD6A47  int         3  
+00007FFCA8AD6A48  sub         r10d,3  
+00007FFCA8AD6A4C  je          SetFileInformationByHandle+72h (07FFCA8AD6A72h)  
+00007FFCA8AD6A4E  sub         r10d,1  
+00007FFCA8AD6A52  je          SetFileInformationByHandle+9Bh (07FFCA8AD6A9Bh)  
+00007FFCA8AD6A54  sub         r10d,1  
+00007FFCA8AD6A58  je          SetFileInformationByHandle+6Bh (07FFCA8AD6A6Bh)  
+00007FFCA8AD6A5A  sub         r10d,1  
+00007FFCA8AD6A5E  jne         SetFileInformationByHandle+79h (07FFCA8AD6A79h)  
+00007FFCA8AD6A60  lea         ecx,[r10+14h]  
+00007FFCA8AD6A64  mov         eax,8  
+00007FFCA8AD6A69  jmp         SetFileInformationByHandle+14h (07FFCA8AD6A14h)  
+00007FFCA8AD6A6B  mov         ecx,13h  
+00007FFCA8AD6A70  jmp         SetFileInformationByHandle+64h (07FFCA8AD6A64h)  
+00007FFCA8AD6A72  call        Win32Rename (07FFCA8AD6AB0h)  
+00007FFCA8AD6A77  jmp         SetFileInformationByHandle+42h (07FFCA8AD6A42h)  
+00007FFCA8AD6A79  sub         r10d,6  
+00007FFCA8AD6A7D  je          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C549h (07FFCA8B35FC9h)  
+00007FFCA8AD6A83  sub         r10d,9  
+00007FFCA8AD6A87  jne         `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C530h (07FFCA8B35FB0h)  
+00007FFCA8AD6A8D  lea         ecx,[r10+40h]  
+00007FFCA8AD6A91  mov         eax,4  
+00007FFCA8AD6A96  jmp         SetFileInformationByHandle+14h (07FFCA8AD6A14h)  
+00007FFCA8AD6A9B  mov         ecx,0Dh  
+00007FFCA8AD6AA0  lea         eax,[rcx-0Ch]  
+00007FFCA8AD6AA3  jmp         SetFileInformationByHandle+14h (07FFCA8AD6A14h)  
+00007FFCA8AD6AA8  int         3  
+00007FFCA8AD6AA9  int         3  
+00007FFCA8AD6AAA  int         3  
+00007FFCA8AD6AAB  int         3  
+00007FFCA8AD6AAC  int         3  
+00007FFCA8AD6AAD  int         3  
+00007FFCA8AD6AAE  int         3  
+00007FFCA8AD6AAF  int         3  
+KernelBase.dll!Win32Rename(void):
+00007FFCA8AD6AB0  mov         rax,rsp  
+00007FFCA8AD6AB3  mov         qword ptr [rax+8],rbx  
+00007FFCA8AD6AB7  mov         qword ptr [rax+10h],rsi  
+00007FFCA8AD6ABB  mov         qword ptr [rax+18h],rdi  
+00007FFCA8AD6ABF  mov         qword ptr [rax+20h],r12  
+00007FFCA8AD6AC3  push        rbp  
+00007FFCA8AD6AC4  push        r14  
+00007FFCA8AD6AC6  push        r15  
+00007FFCA8AD6AC8  mov         rbp,rsp  
+00007FFCA8AD6ACB  sub         rsp,50h  
+00007FFCA8AD6ACF  mov         eax,41h  
+00007FFCA8AD6AD4  cmp         edx,3  
+00007FFCA8AD6AD7  xorps       xmm0,xmm0  
+00007FFCA8AD6ADA  mov         rdi,r8  
+00007FFCA8AD6ADD  mov         r12,rcx  
+00007FFCA8AD6AE0  movups      xmmword ptr [rbp-20h],xmm0  
+00007FFCA8AD6AE4  lea         r15d,[rax-37h]  
+00007FFCA8AD6AE8  cmovne      r15d,eax  
+00007FFCA8AD6AEC  cmp         r9d,18h   ;おそらくsizeof(FILE_RENAME_INFO)よりも小さい場合にエラーとしている
+00007FFCA8AD6AF0  jb          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C584h (07FFCA8B36004h)  
+00007FFCA8AD6AF6  cmp         dword ptr [r8+10h],2  
+00007FFCA8AD6AFB  lea         rbx,[r8+14h]  
+00007FFCA8AD6AFF  jb          Win32Rename+5Bh (07FFCA8AD6B0Bh)  
+00007FFCA8AD6B01  cmp         word ptr [rbx],3Ah  ;おそらくFileNameに対してドライブレターの判定として2文字目が':'(0x34)の場合にRtlDosPathNameToNtPathName_U_WithStatusを実行しないようにしている？
+00007FFCA8AD6B05  je          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C5C7h (07FFCA8B36047h)  
+00007FFCA8AD6B0B  xor         r9d,r9d  
+00007FFCA8AD6B0E  lea         rdx,[rbp-20h]  
+00007FFCA8AD6B12  xor         r8d,r8d  
+00007FFCA8AD6B15  mov         rcx,rbx  
+00007FFCA8AD6B18  call        qword ptr [__imp_RtlDosPathNameToNtPathName_U_WithStatus (07FFCA8C42C70h)]  ;FileNameをNTパスに変換
+00007FFCA8AD6B1F  nop         dword ptr [rax+rax]  
+00007FFCA8AD6B24  test        eax,eax  
+00007FFCA8AD6B26  js          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C5DDh (07FFCA8B3605Dh)  
+00007FFCA8AD6B2C  movzx       eax,word ptr [rbp-20h]  
+00007FFCA8AD6B30  mov         rcx,qword ptr gs:[60h]  
+00007FFCA8AD6B39  xor         edx,edx  
+00007FFCA8AD6B3B  movzx       r14d,ax  
+00007FFCA8AD6B3F  add         r14d,18h  
+00007FFCA8AD6B43  mov         r8d,r14d  
+00007FFCA8AD6B46  mov         rcx,qword ptr [rcx+30h]  
+00007FFCA8AD6B4A  call        qword ptr [__imp_RtlAllocateHeap (07FFCA8C44078h)]  
+00007FFCA8AD6B51  nop         dword ptr [rax+rax]  
+00007FFCA8AD6B56  mov         rsi,rax  
+00007FFCA8AD6B59  test        rax,rax  
+00007FFCA8AD6B5C  je          `tip::details::TipRegistryAggregateResultsStorage::get_reports'::`2'::`dynamic atexit destructor for 'empty''+1C597h (07FFCA8B36017h)  
+00007FFCA8AD6B62  movzx       r8d,word ptr [rbp-20h]  
+00007FFCA8AD6B67  lea         rcx,[rax+14h]  
+00007FFCA8AD6B6B  mov         rdx,qword ptr [rbp-18h]  
+00007FFCA8AD6B6F  call        memcpy (07FFCA8B16D17h)
+00007FFCA8AD6B74  mov         eax,dword ptr [rdi]  
+00007FFCA8AD6B76  lea         rdx,[rbp-10h]  
+00007FFCA8AD6B7A  mov         dword ptr [rsi],eax  
+00007FFCA8AD6B7C  mov         r9d,r14d  
+00007FFCA8AD6B7F  mov         rax,qword ptr [rdi+8]  
+00007FFCA8AD6B83  mov         r8,rsi  
+00007FFCA8AD6B86  mov         qword ptr [rsi+8],rax  
+00007FFCA8AD6B8A  mov         rcx,r12  
+00007FFCA8AD6B8D  movzx       eax,word ptr [rbp-20h]  
+00007FFCA8AD6B91  mov         dword ptr [rsi+10h],eax  
+00007FFCA8AD6B94  mov         dword ptr [rsp+20h],r15d  
+00007FFCA8AD6B99  call        qword ptr [__imp_NtSetInformationFile (07FFCA8C42BD0h)]  
+00007FFCA8AD6BA0  nop         dword ptr [rax+rax]  

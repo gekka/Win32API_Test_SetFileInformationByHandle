@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="_FILE_RENAME_INFO">
+		<DisplayString>{{ ReplaceIfExists={ReplaceIfExists}, FileNameLength={FileNameLength}, FileName={FileName,su} }}</DisplayString>
+		<Expand>
+			<Item Name="ReplaceIfExists">ReplaceIfExists</Item>
+			<Item Name="RootDirectory">RootDirectory</Item>
+			<Item Name="FileNameLength">FileNameLength</Item>
+			<!-- 可変長バッファを指定されたバイト数(文字数)の文字列として展開 -->
+			<Item Name="FileName">FileName,su</Item>
+
+			<!-- 配列全体を直接確認したい場合のフォールバック用 -->
+			<ArrayItems>
+				<Size>FileNameLength / 2</Size>
+				<ValuePointer>FileName</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	 <!--typedef された別名（FILE_RENAME_INFO）にも適用させるため--> 
+	<!-- <Type Name="FILE_RENAME_INFO">
+		<AlternativeType Name="_FILE_RENAME_INFO"/>
+	</Type>-->
+</AutoVisualizer>
